@@ -1,5 +1,7 @@
 require 'mkmf'
 
+$CFLAGS += ' ' unless $CFLAGS.empty?
+
 if RUBY_PLATFORM =~ /mingw|win32/
     $CFLAGS += ' -I/home/john/.rake-compiler/ruby/ruby-1.8.6-p287/include/'
     $LDFLAGS += ' -L/home/john/.rake-compiler/ruby/ruby-1.8.6-p287/lib/'
